@@ -1,0 +1,38 @@
+Client:
+NEWP < reset path variable
+ERROR < set error
+FORMAT < format output
+CSV < says that the output is an csv file
+
+Client information: shorts that should be used to don't couse problems with the database
+, -> %k*
+: -> %d*
+; -> %s*
+% -> %%*
+" -> %A*
+* -> %**
+{space} -> %c*
+{return} -> %n*
+--> WEBAPI % -> %25
+
+command seperator: ";"
+
+Server:
+
+ChangePath {DB Name} ?{Table Name}
+Search {col/row} {number} {value} ?{recursive (default true)}
+Add {col/row} {row: ":" seperated values, col: title":"DefaultValue}
+Replace {col:row} {newVal}
+Remove {col/row} {line or col number}
+Get {col/row/coords/all} !{number/s coords:(col:row) col/row:(num)}(don't important by mode all)
+
+
+List {dbs/tables}
+
+AddDB {Name} {TableName} {TableHeader format:(title:title)}
+AddTable {TableName} {TableHeader}
+
+RemoveDB {Name}
+RemoveTable {TableName}
+
+Stop close database service
